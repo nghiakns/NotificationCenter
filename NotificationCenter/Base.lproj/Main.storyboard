@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ykw-UH-weF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Do-pl-TnO">
+                                <rect key="frame" x="137.5" y="731" width="139" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Choose an animal">
+                                    <backgroundConfiguration key="background" cornerRadius="20">
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="chooseAnimal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Nf-4E-T6t"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat&amp;dog" translatesAutoresizingMaskIntoConstraints="NO" id="Um9-fh-xBd">
+                                <rect key="frame" x="103.5" y="188" width="207" height="179"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqD-H8-NUo">
+                                <rect key="frame" x="177" y="417" width="60" height="21"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="Um9-fh-xBd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="0P2-EL-bMf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Do-pl-TnO" secondAttribute="bottom" constant="100" id="GiF-Nk-Gch"/>
+                            <constraint firstItem="eqD-H8-NUo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IUI-Yh-KFJ"/>
+                            <constraint firstItem="eqD-H8-NUo" firstAttribute="top" secondItem="Um9-fh-xBd" secondAttribute="bottom" constant="50" id="Ihc-r7-aaV"/>
+                            <constraint firstItem="Um9-fh-xBd" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/5" id="K2K-Xn-ohu"/>
+                            <constraint firstItem="Um9-fh-xBd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/2" id="vQG-NL-2zc"/>
+                            <constraint firstItem="Um9-fh-xBd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vWU-pR-xu1"/>
+                            <constraint firstItem="3Do-pl-TnO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z5R-XG-8Xv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TbR-TW-CtI"/>
+                    <connections>
+                        <outlet property="animalImage" destination="Um9-fh-xBd" id="1py-tu-VJp"/>
+                        <outlet property="animalName" destination="eqD-H8-NUo" id="IaW-ZS-GLA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="69.642857142857139"/>
+        </scene>
+        <!--Choose View Controller-->
+        <scene sceneID="xXT-Ob-kQc">
+            <objects>
+                <viewController storyboardIdentifier="choose" id="GeS-mm-B99" customClass="ChooseViewController" customModule="NotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KBR-wg-IGu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an animal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XG6-Go-v6J">
+                                <rect key="frame" x="139.5" y="144" width="135" height="21"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mM-Lp-1r8" userLabel="goToCat">
+                                <rect key="frame" x="103.5" y="335" width="207" height="163.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <backgroundConfiguration key="background" cornerRadius="50" image="cat"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToCat:" destination="GeS-mm-B99" eventType="touchUpInside" id="328-ic-jeZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTv-CV-G15" userLabel="goToDog">
+                                <rect key="frame" x="103.5" y="598.5" width="207" height="163.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <backgroundConfiguration key="background" cornerRadius="50" image="dog"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToDog:" destination="GeS-mm-B99" eventType="touchUpInside" id="xhl-AS-iPu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4W0-2k-6wM"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="4W0-2k-6wM" firstAttribute="bottom" secondItem="jTv-CV-G15" secondAttribute="bottom" constant="100" id="Ebq-qk-hMj"/>
+                            <constraint firstItem="XG6-Go-v6J" firstAttribute="centerX" secondItem="KBR-wg-IGu" secondAttribute="centerX" id="FHt-DL-9gf"/>
+                            <constraint firstItem="jTv-CV-G15" firstAttribute="top" secondItem="4mM-Lp-1r8" secondAttribute="bottom" constant="100" id="Fha-bT-oz5"/>
+                            <constraint firstItem="jTv-CV-G15" firstAttribute="height" secondItem="4W0-2k-6wM" secondAttribute="height" multiplier="1/5" id="JDp-D9-EPu"/>
+                            <constraint firstItem="jTv-CV-G15" firstAttribute="width" secondItem="4W0-2k-6wM" secondAttribute="width" multiplier="1/2" id="S2g-p6-Uxw"/>
+                            <constraint firstItem="4mM-Lp-1r8" firstAttribute="centerX" secondItem="KBR-wg-IGu" secondAttribute="centerX" id="f6G-sE-qzt"/>
+                            <constraint firstItem="4mM-Lp-1r8" firstAttribute="width" secondItem="4W0-2k-6wM" secondAttribute="width" multiplier="1/2" id="fEO-HV-uEk"/>
+                            <constraint firstItem="4mM-Lp-1r8" firstAttribute="height" secondItem="4W0-2k-6wM" secondAttribute="height" multiplier="1/5" id="kjs-4R-gad"/>
+                            <constraint firstItem="XG6-Go-v6J" firstAttribute="top" secondItem="4W0-2k-6wM" secondAttribute="top" constant="100" id="mT5-TK-Rrw"/>
+                            <constraint firstItem="jTv-CV-G15" firstAttribute="centerX" secondItem="KBR-wg-IGu" secondAttribute="centerX" id="nJk-2b-js2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EhG-SG-c5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684.057971014493" y="69.642857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iVP-Ho-msu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ykw-UH-weF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ab6-hD-uvS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JSU-7Y-pg4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIH-T3-yKj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat" width="1200" height="1602"/>
+        <image name="cat&amp;dog" width="2500" height="1667"/>
+        <image name="dog" width="800" height="825"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
